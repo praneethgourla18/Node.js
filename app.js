@@ -1,10 +1,12 @@
-const {x,calculateSum}=require("./sum")
-// import {calculateSum , x} from "./sum.js";
+
+const{x,calculateSum,y,calculateMultiply}=require("./calculate")
 
 console.log("Hello World");
 var a=10;
 var b=20;
-calculateSum(10,20);
+calculateSum(a,b);
 console.log(x)
+calculateMultiply(a,b);
+console.log(y);
 
-// console.log(globalThis)
+
