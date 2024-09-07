@@ -1,5 +1,5 @@
 
-const{x,calculateSum,y,calculateMultiply}=require("./calculate")
+const{x,calculateSum,y,calculateMultiply}=require("./calculate");
 
 const data=require("./data.json")
 
