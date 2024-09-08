@@ -1,14 +1,24 @@
 const http = require("http");
 
 const server = http.createServer(function (req, res) {
-  if (req.url == "/") {
-    res.end("hey");
+
+ 
+  if (req.url === '/notfound') {
+    res.writeHead(404, { 'Content-Type': 'text/plain'   });
+    res.end('Page not found');
+  }
+  
+  else if (req.url == "/") {
+     res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ message: 'hey' }));
   } 
   else if(req.url == "/about"){
-    res.end("about")
+     res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ message: 'how'}))
   }
   else {
-    res.end("Hello world");
+     res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ message: 'hushar' }));
   }
   
 });
